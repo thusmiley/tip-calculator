@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tip calculator app" />
+    <meta name="keywords" content="HTML,CSS,JavaScript" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="" />
+      <div class="calculator">
+        <!-- Input -->
+        <div class="input">
+          <p>Bill</p>
+          <div class="input-bill">
+            <img src="./images/icon-dollar.svg" alt="" />
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              placeholder="0"
+            />
+          </div>
+
+          <p>Select Tip %</p>
+          <div class="input-percent">
+            <button class="select-tip">5%</button>
+            <button class="select-tip">10%</button>
+            <button class="select-tip">15%</button>
+            <button class="select-tip">25%</button>
+            <button class="select-tip">50%</button>
+            <input id="custom" type="number" placeholder="Custom" />
+          </div>
+
+          <p>Number of People</p>
+          <p id="err-msg">Can't be zero</p>
+          <div class="input-people">
+            <img src="./images/icon-person.svg" alt="" />
+            <input type="number" name="people" id="people" placeholder="0" />
+          </div>
+        </div>
+
+        <!-- Output -->
+        <div class="output">
+          <div class="tip">
+            <div class="title-wrapper">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <h1 id="tip">$0.00</h1>
+          </div>
+
+          <div class="total">
+            <div class="title-wrapper">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <h1 id="total">$0.00</h1>
+          </div>
+
+          <button id="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

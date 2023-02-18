@@ -65,21 +65,29 @@ main img {
 }
 
 .input-bill, .input-people {
-  background-color: hsl(189deg, 41%, 97%);
   position: relative;
+  background-color: hsl(189deg, 41%, 97%);
+  height: 48px;
+  border: 2px solid hsl(0deg, 0%, 100%);
   border-radius: 5px;
   padding: 6px 17px;
-  border: 2px solid hsl(0deg, 0%, 100%);
 }
 .input-bill:active, .input-bill:focus, .input-bill:hover, .input-people:active, .input-people:focus, .input-people:hover {
   border: 2px solid hsl(172deg, 67%, 45%);
+}
+.input-bill img, .input-people img {
+  margin-top: 8px;
+}
+.input-bill input, .input-people input {
+  position: absolute;
+  top: 4px;
+  right: 19px;
 }
 
 input {
   border: none;
   background-color: hsl(189deg, 41%, 97%);
-  width: 100%;
-  height: 35px;
+  width: 85%;
   outline: none;
   direction: rtl;
   caret-color: transparent;
@@ -107,30 +115,14 @@ input[type=number] {
 
 input::-moz-placeholder {
   font-family: "Space Mono", monospace;
-  font-size: 24px;
+  font-size: 22px;
   color: hsl(184deg, 14%, 56%);
 }
 
 input::placeholder {
   font-family: "Space Mono", monospace;
-  font-size: 24px;
+  font-size: 22px;
   color: hsl(184deg, 14%, 56%);
-}
-
-.input {
-  position: relative;
-}
-.input input::-moz-placeholder {
-  position: absolute;
-  right: 0;
-}
-.input input::placeholder {
-  position: absolute;
-  right: 0;
-}
-.input img {
-  position: absolute;
-  margin-top: 10px;
 }
 
 .input-percent {
@@ -141,7 +133,7 @@ input::placeholder {
 .input-percent input, .input-percent button {
   font-family: "Space Mono", monospace;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 22px;
   padding: 6px 15px;
   border: none;
 }
@@ -156,16 +148,11 @@ input::placeholder {
 }
 .input-percent input {
   height: 100%;
+  width: 100%;
   border: 2px solid hsl(0deg, 0%, 100%);
 }
 .input-percent input:hover, .input-percent input:focus, .input-percent input:active {
   border: 2px solid hsl(172deg, 67%, 45%);
-}
-.input-percent input::-moz-placeholder {
-  padding: 0 15px;
-}
-.input-percent input::placeholder {
-  padding: 0 15px;
 }
 
 #err-msg {
@@ -239,8 +226,17 @@ input::placeholder {
   .input p:not(:first-child) {
     margin-top: 32px;
   }
+  input {
+    width: 75%;
+  }
   .input-percent {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .input-percent input::-moz-placeholder {
+    font-size: 18px;
+  }
+  .input-percent input::placeholder, .input-percent button {
+    font-size: 18px;
   }
   #err-msg {
     bottom: 54px;

@@ -56,19 +56,24 @@ main
         &:not(:first-child)
             margin-top: 40px
 .input-bill, .input-people
-    background-color: $very-light-grayish-cyan
     position: relative
+    background-color: $very-light-grayish-cyan
+    height: 48px
+    border: 2px solid $white
     border-radius: 5px
     padding: 6px 17px
-    border: 2px solid $white
     &:active, &:focus, &:hover
         border: 2px solid $strong-cyan
-        
+    img
+        margin-top: 8px
+    input
+        position: absolute        
+        top: 4px
+        right: 19px
 input
     border: none
     background-color: $very-light-grayish-cyan
-    width: 100%
-    height: 35px
+    width: 85%
     outline: none
     direction: rtl //position input to the right
     caret-color: transparent //remove blinking cursor
@@ -91,17 +96,9 @@ input[type=number]
 
 input::placeholder
     font-family: 'Space Mono', monospace
-    font-size: 24px
+    font-size: 22px
     color: $grayish-cyan
 
-.input
-    position: relative
-    input::placeholder
-        position: absolute
-        right: 0
-    img
-        position: absolute
-        margin-top: 10px
 .input-percent 
     display: grid
     grid-template-columns: repeat(3, 117px)
@@ -109,7 +106,7 @@ input::placeholder
     input, button
         font-family: 'Space Mono', monospace
         border-radius: 5px
-        font-size: 24px
+        font-size: 22px
         padding: 6px 15px
         border: none
     button
@@ -121,11 +118,10 @@ input::placeholder
             color: $very-dark-cyan
     input
         height: 100% 
+        width: 100%
         border: 2px solid $white
         &:hover, &:focus, &:active
             border: 2px solid $strong-cyan
-    input::placeholder
-        padding: 0 15px
        
 #err-msg
     position: absolute     
@@ -180,9 +176,13 @@ input::placeholder
     .input, .output
         width: 100%     
     .input p:not(:first-child)
-        margin-top: 32px            
+        margin-top: 32px
+    input
+        width: 75%                
     .input-percent 
-        grid-template-columns: repeat(2, 1fr)    
+        grid-template-columns: repeat(2, 1fr)  
+        input::placeholder, button
+            font-size: 18px      
     #err-msg
         bottom: 54px
         font-size: 12px

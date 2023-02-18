@@ -102,6 +102,8 @@ input::placeholder
 .input-percent 
     display: grid
     grid-template-columns: repeat(3, 117px)
+    grid-template-rows: repeat(2, 48px)
+
     gap: 14px
     input, button
         font-family: 'Space Mono', monospace
@@ -113,14 +115,13 @@ input::placeholder
         background-color: $very-dark-cyan
         color: $white
         cursor: pointer
-        border: 2px solid $white
         &:hover, &:active
             background-color: $light-grayish-cyan
             color: $very-dark-cyan
     input
         height: 100% 
         width: 100%
-        border: 2px solid $white
+        border: 2px solid $very-light-grayish-cyan
         &:hover, &:focus, &:active
             border: 2px solid $strong-cyan
        
@@ -151,7 +152,7 @@ input::placeholder
         border: none
         width: 100%     
         padding: 9px 40px
-        border-radius:  5px
+        border-radius: 5px
         font-size: 20px
         cursor: pointer
         opacity: 0.3
@@ -182,6 +183,7 @@ input::placeholder
         width: 75%                
     .input-percent 
         grid-template-columns: repeat(2, 1fr)  
+        grid-template-rows: repeat(3, 48px)
         input::placeholder, button
             font-size: 18px      
     #err-msg
@@ -190,7 +192,7 @@ input::placeholder
 
     .output
         margin-left: 0
-        margin-top: 32px 
+        margin-top: 30px 
         padding: 37px 24px  
         h1
             font-size: 32px

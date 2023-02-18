@@ -141,6 +141,7 @@ input::placeholder {
   background-color: hsl(183deg, 100%, 15%);
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  border: 2px solid hsl(0deg, 0%, 100%);
 }
 .input-percent button:hover, .input-percent button:active {
   background-color: hsl(185deg, 41%, 84%);

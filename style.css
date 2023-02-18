@@ -192,6 +192,8 @@ input::placeholder {
   font-size: 20px;
   cursor: pointer;
   opacity: 0.3;
+  color: hsl(183deg, 100%, 15%);
+  font-family: "Space Mono", monospace;
 }
 .output button:hover, .output button:active {
   background-color: hsl(185deg, 41%, 84%);

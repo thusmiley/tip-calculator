@@ -17,7 +17,7 @@ Tip Calculator App
 
 ### Links
 
-- Git URL: https://github.com/thusmiley/clipboard-landing-page.git
+- Git URL: https://github.com/thusmiley/tip-calculator.git
 - Live Site URL: https://thusmiley.github.io/clipboard-landing-page/
 
 

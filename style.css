@@ -220,9 +220,14 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 950px) {
+  body {
+    height: auto;
+  }
   main {
-    padding-left: calc(8px + 1.5625vw);
-    padding-right: calc(8px + 1.5625vw);
+    padding: 40px calc(8px + 1.5625vw);
+  }
+  main img {
+    margin-bottom: 40px;
   }
   .calculator {
     flex-direction: column;
@@ -238,7 +243,8 @@ input::placeholder {
     grid-template-columns: repeat(2, 1fr);
   }
   #err-msg {
-    bottom: 52px;
+    bottom: 54px;
+    font-size: 12px;
   }
   .output {
     margin-left: 0;

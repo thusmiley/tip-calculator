@@ -131,10 +131,11 @@ input::placeholder
     bottom: 75px  
     color: red 
     display: none
-.active
+
+.select-tip.active
     background-color: $light-grayish-cyan
     color: $very-dark-cyan
-    
+
 .output
     margin-left: 50px
     background-color: $very-dark-cyan
@@ -162,7 +163,9 @@ input::placeholder
         color: $very-dark-cyan
         font-family: 'Space Mono', monospace
         &:hover, &:active
-            background-color: $light-grayish-cyan    
+            background-color: $light-grayish-cyan  
+        &.active
+            opacity: 1  
 .tip, .total
     display: flex
     justify-content: space-between

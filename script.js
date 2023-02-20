@@ -8,9 +8,33 @@ const resetBtn = document.getElementById("reset");
 const selectBtns = document.getElementsByClassName("select-tip");
 let tipPercent = 0;
 
-// Change opacity of the Reset button (empty state)
-let changeResetBtnOpacityToActive = function(){
+//Sets reset button to default state
+let setResetBtnDefault = function(){
+  resetBtn.style.opacity = "0.3";
+};
+
+//Sets reset button to active state
+let setResetBtnActive = function(){
   resetBtn.style.opacity = '1';
+};
+
+//Sets tip buttons to default state
+let setTipButtonsDefault = function(){
+  for (let btn of selectBtns){
+    btn.style.background = 'rgb(0, 73, 77)'
+    btn.style.color = 'rgb(255, 255, 255)'
+  }
+};
+
+//Sets tip button to active state
+let setTipButtonActive = function(btn){
+  btn.style.background = 'rgb(197, 228, 231)';
+  btn.style.color = 'rgb(0, 73, 77)';
+};
+
+//Sets customTip field to default
+let setCustomTipDefault = function(){
+  customTip.value = '';
 };
 
 //Calculates the final bill if there are inputs for bill, tip, and number of people
@@ -35,38 +59,57 @@ let calculateBill = function(){
 
 //Handles bill input
 bill.addEventListener('input', function () {
-  changeResetBtnOpacityToActive();
+  //Handles button colors
+  setResetBtnActive();
+
+  //Handles input and calculates the bill
   calculateBill();
-}) 
+}); 
 
 //Handles input to tip percent buttons
 for (let btn of selectBtns) {
-  btn.addEventListener("click", () => {   
-    changeResetBtnOpacityToActive();
-    customTip.value = '';
+  btn.addEventListener('click', () => {   
+    //Handles button colors
+    setTipButtonsDefault();
+    setTipButtonActive(btn)
+    setResetBtnActive();
+
+    //Handles input and calculates the bill
+    setCustomTipDefault();
     tipPercent = Number.parseInt(btn.textContent);
     calculateBill();
     });
-}
+};
 
 //Handles input for custom tip ammount
 customTip.addEventListener("input", () => {
-  changeResetBtnOpacityToActive();
+  //Handles button colors
+  setResetBtnActive();
+  setTipButtonsDefault();
+
+  //Handles input and calculates the bill
   tipPercent = customTip.value;
   calculateBill();
 });
 
 //Handles input for number of people
 people.addEventListener("input", () => {
-  changeResetBtnOpacityToActive();
+  //Handles button colors
+  setResetBtnActive();
+  
+  //Handles input and calculates the bill
   calculateBill();
 });
 
 //Resets the app to initial state
 resetBtn.addEventListener("click", () => {
+  //Handles button colors
+  setTipButtonsDefault();
+  setResetBtnDefault();
+
+  //Resets app
   bill.value = people.value = customTip.value = "";
   showTip.textContent = showTotal.textContent = `$0.00`;
-  resetBtn.style.opacity = "0.3";
   tipPercent = 0;
   errMsg.style.display = "none";
 });

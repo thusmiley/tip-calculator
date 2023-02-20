@@ -164,6 +164,11 @@ input::placeholder {
   display: none;
 }
 
+.active {
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(183deg, 100%, 15%);
+}
+
 .output {
   margin-left: 50px;
   background-color: hsl(183deg, 100%, 15%);

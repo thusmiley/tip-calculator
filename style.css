@@ -164,7 +164,7 @@ input::placeholder {
   display: none;
 }
 
-.active {
+.select-tip.active {
   background-color: hsl(185deg, 41%, 84%);
   color: hsl(183deg, 100%, 15%);
 }
@@ -202,6 +202,9 @@ input::placeholder {
 }
 .output button:hover, .output button:active {
   background-color: hsl(185deg, 41%, 84%);
+}
+.output button.active {
+  opacity: 1;
 }
 
 .tip, .total {

@@ -10,26 +10,24 @@ let tipPercent = 0;
 
 //Sets reset button to default state
 let setResetBtnDefault = function(){
-  resetBtn.style.opacity = "0.3";
+  resetBtn.classList.remove('active');
 };
 
 //Sets reset button to active state
 let setResetBtnActive = function(){
-  resetBtn.style.opacity = '1';
+  resetBtn.classList.add('active');
 };
 
 //Sets tip buttons to default state
 let setTipButtonsDefault = function(){
   for (let btn of selectBtns){
-    btn.style.background = 'rgb(0, 73, 77)'
-    btn.style.color = 'rgb(255, 255, 255)'
+    btn.classList.remove('active');
   }
 };
 
 //Sets tip button to active state
 let setTipButtonActive = function(btn){
-  btn.style.background = 'rgb(197, 228, 231)';
-  btn.style.color = 'rgb(0, 73, 77)';
+  btn.classList.add('active');
 };
 
 //Sets customTip field to default
